@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const successArrayBuffer = await successResponse.arrayBuffer();
       successBuffer = await audioContext.decodeAudioData(successArrayBuffer);
 
-      const bgMusicResponse = await fetch('Kuy/background-music.mp3');
+      const bgMusicResponse = await fetch('./background-music.mp3');
       const bgMusicArrayBuffer = await bgMusicResponse.arrayBuffer();
       bgMusicBuffer = await audioContext.decodeAudioData(bgMusicArrayBuffer);
     } catch (err) {
