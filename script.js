@@ -27,15 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       audioContext = new (window.AudioContext || window.webkitAudioContext)();
       
-      const scratchResponse = await fetch('sound/scratch.mp3');
+      const scratchResponse = await fetch('scratch.mp3');
       const scratchArrayBuffer = await scratchResponse.arrayBuffer();
       scratchBuffer = await audioContext.decodeAudioData(scratchArrayBuffer);
 
-      const successResponse = await fetch('sound/success.wav');
+      const successResponse = await fetch('success.wav');
       const successArrayBuffer = await successResponse.arrayBuffer();
       successBuffer = await audioContext.decodeAudioData(successArrayBuffer);
 
-      const bgMusicResponse = await fetch('sound/background-music.mp3');
+      const bgMusicResponse = await fetch('background-music.mp3');
       const bgMusicArrayBuffer = await bgMusicResponse.arrayBuffer();
       bgMusicBuffer = await audioContext.decodeAudioData(bgMusicArrayBuffer);
     } catch (err) {
